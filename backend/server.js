@@ -8,6 +8,10 @@ const app = express();
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Hello from here");
+});
+
 app.get("/api/test", (req, res) => {
   res.json("Hello World" + Date.now());
 });
